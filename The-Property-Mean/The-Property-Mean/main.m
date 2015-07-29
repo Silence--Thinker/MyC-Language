@@ -26,6 +26,7 @@ int main(int argc, const char * argv[]) {
         而weak是一种非拥有关系，属性遭到催毁时，属性会至空。更加安全，可靠。
      
      */
+    
     @autoreleasepool {
         
         Father *father = [[Father alloc] init];
@@ -37,9 +38,10 @@ int main(int argc, const char * argv[]) {
         
         person.delegate = son;
         NSLog(@"==%@==", person.delegate);
+        
+        NSLog(@"===%p", person.delegate);
     }
-    
-    NSLog(@"==%@==", person.delegate);
-    
+    NSLog(@"===%p", person.delegate);
+    NSLog(@"==%@==%@", person.delegate, person.title);
     
 }

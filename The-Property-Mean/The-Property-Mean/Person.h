@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+//#import "Son.h"
+@class Son;
 @protocol PersonDelegate <NSObject>
 @optional
 
@@ -23,10 +25,14 @@
 /** age */
 @property (assign, nonatomic) int age;
 
+/** jj */
+@property (assign, nonatomic) NSString *title;
+
+/** father */
+@property (assign, nonatomic) Son *fa;
 
 /** delegate */
 @property (weak, nonatomic) id<PersonDelegate> delegate;
 // 在MRC中delegate用的是assign 在ARC中delegate用的是weak
-
 
 @end
